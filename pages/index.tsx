@@ -13,7 +13,7 @@ const Home: NextPage = () => {
   const [complementNumber, setComplementNumber] = useState<number>(0)
   const [history, setHistory] = useState<LottoHistory[]>([])
 
-  const addToHistory = (numbers, complement): void => {
+  const addToHistory = (numbers: number[], complement: number): void => {
     setHistory([...history, { numbers: numbers, complement: complement }])
   }
 
