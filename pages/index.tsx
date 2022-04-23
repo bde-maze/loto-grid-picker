@@ -1,6 +1,5 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import Image from 'next/image'
 import { useEffect, useState } from 'react'
 
 interface LottoHistory {
@@ -38,8 +37,8 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="flex h-full w-full flex-1 items-center justify-center px-20 text-center">
-        <div className="flex h-full w-8/12 flex-1 flex-col items-center justify-center  text-center">
+      <main className="flex h-full w-full flex-1 flex-col items-center justify-center px-20 text-center md:flex-row">
+        <div className="mb-8 flex h-full w-full flex-1 flex-col items-center justify-center text-center md:w-8/12">
           <h1 className="text-6xl font-bold">Lotto grid picker</h1>
           <div className="mt-12">
             <div className="flex items-center justify-center">
@@ -67,7 +66,7 @@ const Home: NextPage = () => {
             </div>
           </div>
         </div>
-        <div className="flex h-full w-4/12  flex-1 flex-col items-center justify-center  text-center">
+        <div className="mb-8 flex h-full w-full flex-1  flex-col items-center justify-center text-center  md:w-4/12">
           <h2 className="text-4xl font-bold">History</h2>
           <div className="mt-12 flex max-h-[480px] w-full flex-col overflow-auto">
             {history.map((history, index) => (
